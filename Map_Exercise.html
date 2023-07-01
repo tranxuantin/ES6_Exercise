@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map Exercise</title>
+  </head>
+  <body>
+    <script>
+      const birds = [
+        { ID: "DV8", Name: "Eurasian Collared-Dove", Type: "Dove" },
+        { ID: "HK12", Name: "Bald Eagle", Type: "Hawk" },
+        { ID: "HK6", Name: "Cooper's Hawk", Type: "Hawk" },
+        { ID: "SP11", Name: "Bell's Sparrow", Type: "Sparrow" },
+        { ID: "DV2", Name: "Mourning Dove", Type: "Dove" },
+      ];
+
+      const Name_Bird = birds.map((TypeOfBird) => {
+        return TypeOfBird.Name;
+      });
+
+      const ID_Bird = birds.map((TypeOfBird) => {
+        return TypeOfBird.ID;
+      });
+
+      for (let index = 0; index < birds.length; index++) {
+        let result = Name_Bird[index] + " has ID: " + ID_Bird[index];
+        console.log(result);
+      }
+    </script>
+  </body>
+</html>

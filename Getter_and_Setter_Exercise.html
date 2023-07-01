@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getter and Setter Exercise</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(name) {
+          this.name = name;
+        }
+
+        get Name() {
+          return this.name;
+        }
+
+        set Name(new_Name) {
+          this.name = new_Name;
+        }
+
+        walk(distance) {
+          console.log(`${this.name} walked ${distance}`);
+        }
+      }
+
+      class Programmer extends Person {
+        constructor(name, language_coding) {
+          super(name);
+          this.language_coding = language_coding;
+        }
+
+        get language() {
+          return this.language_coding;
+        }
+
+        set language(new_Language) {
+          this.language_coding = new_Language;
+        }
+
+        printInfo() {
+          console.log(this.name, this.language);
+        }
+      }
+
+      let programmer = new Programmer("Tran Xuan Tin", "Javascript");
+      console.log(programmer.language);
+      programmer.printInfo();
+    </script>
+  </body>
+</html>

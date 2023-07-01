@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Exercise</title>
+  </head>
+  <body>
+    <script>
+      class Information {
+        constructor(name, describe) {
+          this.name = name;
+          this.describe = describe;
+        }
+
+        static Math_Function(newValue) {
+          let digit = 1;
+          if (newValue) {
+            digit = newValue;
+            digit *= 3;
+          }
+          return digit;
+        }
+      }
+
+      class geometry extends Information {
+        constructor(name, describe, length, width) {
+          super(name, describe);
+          this.length = length;
+          this.width = width;
+        }
+
+        static Math_Calculating_Function(Length, Width) {
+          let length = 1,
+            width = 1;
+          if (Length && Width) {
+            length = Length;
+            width = Width;
+          }
+          let S = length * width;
+          return S;
+        }
+      }
+
+      let Shape = new geometry("Square", "Square", 8, 8, "Square");
+
+      console.log(geometry.Math_Function(4));
+      console.log(geometry.Math_Calculating_Function(2,3))
+      console.log(Shape);
+    </script>
+  </body>
+</html>

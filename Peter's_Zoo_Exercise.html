@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peter's Zoo Exercise</title>
+  </head>
+  <body>
+    <script>
+      const zoo = new Set(["birds", "elephants", "lions", "eagles", "lions"]);
+      zoo.add("tigers");
+      zoo.delete("birds");
+      let check = zoo.has("chickens");
+      let list = [...zoo];
+      console.log(list);
+      console.log("chickens " + check);
+    </script>
+  </body>
+</html>
